@@ -1,0 +1,6 @@
+CREATE TABLE HORSE (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    peso INT,
+    nome VARCHAR(255),
+    raca VARCHAR(255)
+);
