@@ -11,7 +11,7 @@ import java.util.List;
 
 
 @Entity
-@Table(name = "USER")
+@Table(name = "USUARIOS")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -27,7 +27,17 @@ public class User implements UserDetails {
 
     private String password;
 
+    @Enumerated(EnumType.STRING)
     private UserRole role;
+
+    public User(String login, String encryptedPassword, UserRole role) {
+        this.role = role;
+        this.login = login;
+        this.password = encryptedPassword;
+    }
+
+    public User(String login, String encryptedPassword, String user) {
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

@@ -18,7 +18,7 @@ public class HorseController {
     }
 
     @PostMapping
-    public Horse saveHorse(@RequestBody Horse horse){
+    public Horse saveHorse(@RequestBody Horse horse) {
         return horseService.saveHorse(horse);
     }
 }
